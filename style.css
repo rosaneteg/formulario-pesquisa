@@ -1,0 +1,189 @@
+/* Configurações gerais */
+
+* {
+    box-sizing: border-box;    
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 30px 15px;
+    color: #2d3748;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 0 0 5px;
+    color: #2b6cb0;    
+}
+
+.subtitulo {
+    margin: 0 0 25px;
+    color: #718096;    
+}
+
+.campo {
+    margin-bottom: 20px;
+    border: none;
+    padding: 0;
+}
+
+label, legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+/* Estados de validação  */
+.campo.invalido input[type="text"],
+.campo.invalido input[type="email"],
+.campo.invalido input[type="number"],
+.campo.invalido select,
+.campo.invalido textarea {
+    border-color: #e53e3e;
+    background: #fff5f5;    
+}
+
+.campo.valido input[type="text"],
+.campo.valido input[type="email"],
+.campo.valido input[type="numer"],
+.campo.valido select,
+.campo.valido textarea {
+    border-color: #38a169;
+}
+
+.erro {
+    display: block;
+    min-height: 18px;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color:#e53e3e;
+}
+
+/* Tratamento do checkbox */
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+/* Nota - transformar o radio em formato de botão */
+.opcoes-nota {
+    display: flex;
+    gap: 10px;
+}
+
+.opcoes-nota label {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Esconder o radio original, mas manter le acessível pelo teclado */
+.opcoes-nota input {
+    position: absolute;
+    opacity: 0;
+}
+
+.opcoes-nota span {
+    display: block;
+    width: 46px;
+    height: 46px;
+    line-height: 42px;
+    text-align: center;
+    border: 2px solid #cbd5e0;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.opcoes-nota label:hover span {
+    border-color: #3182ce;
+}
+
+/* Pintando a bolinha quandoi o usuário marcar a nota */
+.opcoes-nota input:checked + span {
+    background: #3182ce;
+    border-color: #3182ce;
+    color: #fff;
+}
+
+/* colocando sombra quando item receber o foco */
+.opcoes-nota input:focus-visible + span {
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.35);
+}
+
+/* Campo inválido - se não informar a nota, quero que a borda fique vermelha*/
+.campo.invalido .opcoes-nota span {
+    border-color: red;
+}
+
+/* Estilizando o contador */
+.contador {
+    display: block;
+    text-align: right;
+    color: #718096;
+    margin-top: 4px;
+}
+
+/* Arrumar o estilo do botão */
+.botao {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #fff;
+    background:#3182ce;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botao:hover {
+    background: pink;
+}
+
